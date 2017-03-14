@@ -8,6 +8,3 @@ configure = admin/config/content/mollom
 test_dependencies[] = ctools
 
 stylesheets[all][] = mollom.css
-
-files[] = tests/mollom.test
-files[] = tests/mollom.class.test

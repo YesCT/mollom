@@ -1,0 +1,209 @@
+[MollomTestingModeTestCase]
+name = Testing mode
+description = Tests toggling of testing mode.
+group = Mollom
+file = mollom.test
+
+[MollomInstallationTestCase]
+name = Installation and key handling
+description = Tests module installation and key error handling.
+group = Mollom
+file = mollom.test
+
+[MollomResponseTestCase]
+name = Server responses
+description = Tests that Mollom server responses match expectations.
+group = Mollom
+file = mollom.test
+
+[MollomResponseLocalTestCase]
+name = Server responses (local)
+description = Tests that local fake Mollom server responses match expectations.
+group = Mollom
+file = mollom.test
+
+[MollomResponseConfiguredTestCase]
+name = Server responses (configured)
+description = Tests that a configured endpoint behaves the same as specified endpoints.
+group = Mollom
+file = mollom.test
+
+[MollomAccessTestCase]
+name = Access checking
+description = Confirm that there is a working key pair and that this status is correctly indicated on the module settings page for appropriate users.
+group = Mollom
+file = mollom.test
+
+[MollomBypassAccessTestCase]
+name = Bypass access
+description = Tests that users having higher privileges can bypass Mollom protection.
+group = Mollom
+file = mollom.test
+
+[MollomFallbackModeTestCase]
+name = Fallback mode
+description = Tests expected fallback behavior when Mollom servers are not available.
+group = Mollom
+file = mollom.test
+
+[MollomBlacklistTestCase]
+name = Blacklist
+description = Tests URL and text blacklist functionality.
+group = Mollom
+file = mollom.test
+
+[MollomProfanityTestCase]
+name = Profanity checking
+description = Tests form protection with text analysis checking for profanity.
+group = Mollom
+file = mollom.test
+
+[MollomFormConfigurationTestCase]
+name = Form administration
+description = Verify that forms can be properly protected and unprotected.
+group = Mollom
+file = mollom.test
+
+[MollomUserFormsTestCase]
+name = User integration
+description = Tests protection of User module forms.
+group = Mollom
+file = mollom.test
+
+[MollomProfileFormsTestCase]
+name = Profile integration
+description = Tests Profile module integration.
+group = Mollom
+file = mollom.test
+
+[MollomNodeFormTestCase]
+name = Node integration
+description = Tests node form protection.
+group = Mollom
+file = mollom.test
+
+[MollomCommentFormTestCase]
+name = Comment integration
+description = Check that the comment submission form can be protected.
+group = Mollom
+file = mollom.test
+
+[MollomActionsTestCase]
+name = Actions integration
+description = Tests actions provided for comments and nodes.
+group = Mollom
+file = mollom.test
+
+[MollomContactFormTestCase]
+name = Contact integration
+description = Tests protection of Contact module forms.
+group = Mollom
+file = mollom.test
+
+[MollomResellerTestCase]
+name = Reseller functionality
+description = Check that the reseller APIs are working properly.
+group = Mollom
+file = mollom.test
+
+[MollomDataTestCase]
+name = Data processing
+description = Verify that form registry information is properly transformed into data that is sent to Mollom servers.
+group = Mollom
+file = mollom.test
+
+[MollomDataCRUDTestCase]
+name = Data CRUD
+description = Verify that Mollom data can be created, read, updated, and deleted.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisTestCase]
+name = Text analysis
+description = Tests text analysis functionality.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisPageCacheTestCase]
+name = Text analysis (page cache)
+description = Tests text analysis with page cache.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisPageFormCacheTestCase]
+name = Text analysis (page + form cache)
+description = Tests text analysis with page and form cache.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisAuthenticatedTestCase]
+name = Text analysis (authenticated)
+description = Tests text analysis as authenticated user.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisAuthenticatedPageFormCacheTestCase]
+name = Text analysis (authenticated + page + form cache)
+description = Tests text analysis as authenticated user with enabled page and form cache.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisOptionsTestCase]
+name = Text analysis options
+description = Tests text analysis binary mode, retaining unsure/spam.
+group = Mollom
+file = mollom.test
+
+[MollomAnalysisPageCachingTestCase]
+name = Text analysis with caching
+description = Tests basic text analysis functionality with enabled caching.
+group = Mollom
+file = mollom.test
+
+[MollomCaptchaTestCase]
+name = CAPTCHA
+description = Tests CAPTCHA functionality.
+group = Mollom
+file = mollom.test
+
+[MollomCaptchaPageCacheTestCase]
+name = CAPTCHA (page cache)
+description = Tests CAPTCHA with page cache.
+group = Mollom
+file = mollom.test
+
+[MollomCaptchaPageFormCacheTestCase]
+name = CAPTCHA (page + form cache)
+description = Tests CAPTCHA with page and form cache.
+group = Mollom
+file = mollom.test
+
+[MollomCaptchaAuthenticatedTestCase]
+name = CAPTCHA (authenticated)
+description = Tests CAPTCHA as authenticated user.
+group = Mollom
+file = mollom.test
+
+[MollomCaptchaAuthenticatedPageFormCacheTestCase]
+name = CAPTCHA (authenticated + page + form cache)
+description = Tests CAPTCHA as authenticated user with enabled page and form cache.
+group = Mollom
+file = mollom.test
+
+[MollomReportTestCase]
+name = Reporting functionality
+description = Verify that session data is properly stored and content can be reported to Mollom.
+group = Mollom
+file = mollom.test
+
+[MollomModerateUserTestCase]
+name = Moderate users
+description = Tests moderating user accounts.
+group = Mollom
+file = mollom.test
+
+[MollomFlagAsInappropriateTestCase]
+name = Flag as Inappropriate
+description = Tests flag as inappropriate feature.
+group = Mollom
+file = mollom.test

@@ -1043,14 +1043,6 @@ class MollomTestingModeTestCase extends MollomWebTestCase {
    */
   protected $disableDefaultSetup = TRUE;
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Testing mode',
-      'description' => 'Tests toggling of testing mode.',
-      'group' => 'Mollom',
-    );
-  }
-
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
 
@@ -1160,14 +1152,6 @@ class MollomInstallationTestCase extends MollomWebTestCase {
   protected $mollomClass = 'MollomDrupalTestLocal';
   protected $disableDefaultSetup = TRUE;
   protected $createKeys = FALSE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Installation and key handling',
-      'description' => 'Tests module installation and key error handling.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom_test'));
@@ -1315,14 +1299,6 @@ class MollomInstallationTestCase extends MollomWebTestCase {
 class MollomResponseTestCase extends MollomWebTestCase {
 
   protected $disableDefaultSetup = TRUE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Server responses',
-      'description' => 'Tests that Mollom server responses match expectations.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
@@ -1732,27 +1708,12 @@ class MollomResponseLocalTestCase extends MollomResponseTestCase {
   // Re-route Mollom communication to this testing site.
   protected $mollomClass = 'MollomDrupalTestLocal';
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Server responses (local)',
-      'description' => 'Tests that local fake Mollom server responses match expectations.',
-      'group' => 'Mollom',
-    );
-  }
 }
 
 /**
  * Tests low-level communication with configured server.
  */
 class MollomResponseConfiguredTestCase extends MollomWebTestCase {
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Server responses (configured)',
-      'description' => 'Tests that a configured endpoint behaves the same as specified endpoints.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom_test_server', 'mollom_test', 'mollom'));
@@ -1786,14 +1747,6 @@ class MollomResponseConfiguredTestCase extends MollomWebTestCase {
 class MollomAccessTestCase extends MollomWebTestCase {
   protected $mollomClass = 'MollomDrupalTestLocal';
   protected $createKeys = FALSE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Access checking',
-      'description' => 'Confirm that there is a working key pair and that this status is correctly indicated on the module settings page for appropriate users.',
-      'group' => 'Mollom',
-    );
-  }
 
   /**
    * Configure an invalid key pair and ensure error message.
@@ -1855,14 +1808,6 @@ class MollomAccessTestCase extends MollomWebTestCase {
 class MollomBypassAccessTestCase extends MollomWebTestCase {
   // Requires entity-level access permissions.
   protected $profile = 'standard';
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Bypass access',
-      'description' => 'Tests that users having higher privileges can bypass Mollom protection.',
-      'group' => 'Mollom',
-    );
-  }
 
   /**
    * Tests 'bypass access' property of registered forms.
@@ -1934,14 +1879,6 @@ class MollomFallbackModeTestCase extends MollomWebTestCase {
    * @see setUp()
    */
   protected $createKeys = FALSE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Fallback mode',
-      'description' => 'Tests expected fallback behavior when Mollom servers are not available.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('node', 'comment'));
@@ -2091,14 +2028,6 @@ class MollomFallbackModeTestCase extends MollomWebTestCase {
  */
 class MollomBlacklistTestCase extends MollomWebTestCase {
   protected $disableDefaultSetup = TRUE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Blacklist',
-      'description' => 'Tests URL and text blacklist functionality.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom'));
@@ -2306,13 +2235,6 @@ class MollomBlacklistTestCase extends MollomWebTestCase {
  * Tests Mollom form profanity filtering functionality.
  */
 class MollomProfanityTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Profanity checking',
-      'description' => 'Tests form protection with text analysis checking for profanity.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom_test'));
@@ -2432,14 +2354,6 @@ class MollomProfanityTestCase extends MollomWebTestCase {
 class MollomFormConfigurationTestCase extends MollomWebTestCase {
   // Re-route Mollom communication to this testing site.
   protected $mollomClass = 'MollomDrupalTestLocal';
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Form administration',
-      'description' => 'Verify that forms can be properly protected and unprotected.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom_test'));
@@ -2765,13 +2679,6 @@ class MollomFormConfigurationTestCase extends MollomWebTestCase {
  * Tests protection of User module forms.
  */
 class MollomUserFormsTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'User integration',
-      'description' => 'Tests protection of User module forms.',
-      'group' => 'Mollom',
-    );
-  }
 
   /**
    * Make sure that the request password form is protected correctly.
@@ -2979,13 +2886,6 @@ class MollomUserFormsTestCase extends MollomWebTestCase {
  * Tests Profile module integration.
  */
 class MollomProfileFormsTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Profile integration',
-      'description' => 'Tests Profile module integration.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('profile'));
@@ -3049,14 +2949,6 @@ class MollomProfileFormsTestCase extends MollomWebTestCase {
  */
 class MollomNodeFormTestCase extends MollomWebTestCase {
   private $node;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Node integration',
-      'description' => 'Tests node form protection.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -3190,13 +3082,6 @@ class MollomNodeFormTestCase extends MollomWebTestCase {
 }
 
 class MollomCommentFormTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Comment integration',
-      'description' => 'Check that the comment submission form can be protected.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('comment'));
@@ -3386,14 +3271,6 @@ class MollomActionsTestCase extends MollomWebTestCase {
   // Re-route Mollom communication to this testing site.
   protected $mollomClass = 'MollomDrupalTestLocal';
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Actions integration',
-      'description' => 'Tests actions provided for comments and nodes.',
-      'group' => 'Mollom',
-    );
-  }
-
   function setUp() {
     parent::setUp(array('comment'));
     $this->drupalCreateContentType(array('type' => 'article', 'name' => 'Article'));
@@ -3505,14 +3382,6 @@ class MollomActionsTestCase extends MollomWebTestCase {
 class MollomContactFormTestCase extends MollomWebTestCase {
   protected $disableDefaultSetup = TRUE;
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Contact integration',
-      'description' => 'Tests protection of Contact module forms.',
-      'group' => 'Mollom',
-    );
-  }
-
   function setUp() {
     parent::setUp(array('contact', 'mollom'));
     $this->setKeys();
@@ -3606,13 +3475,6 @@ class MollomContactFormTestCase extends MollomWebTestCase {
 }
 
 class MollomResellerTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Reseller functionality',
-      'description' => 'Check that the reseller APIs are working properly.',
-      'group' => 'Mollom',
-    );
-  }
 
   /**
    * Make sure that resellers can create a new site.
@@ -3682,14 +3544,6 @@ class MollomResellerTestCase extends MollomWebTestCase {
 class MollomDataTestCase extends MollomWebTestCase {
   // Re-route Mollom communication to this testing site.
   protected $mollomClass = 'MollomDrupalTestLocal';
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Data processing',
-      'description' => 'Verify that form registry information is properly transformed into data that is sent to Mollom servers.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom_test'));
@@ -4221,14 +4075,6 @@ class MollomDataCRUDTestCase extends MollomWebTestCase {
 
   protected $mollomClass = 'MollomDrupalTestLocal';
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Data CRUD',
-      'description' => 'Verify that Mollom data can be created, read, updated, and deleted.',
-      'group' => 'Mollom',
-    );
-  }
-
   /**
    * Verify that Mollom data can be updated.
    *
@@ -4310,14 +4156,6 @@ class MollomAnalysisTestCase extends MollomWebTestCase {
   // Re-route Mollom communication to this testing site.
   // @todo Remove this when Testing API is fixed.
   protected $mollomClass = 'MollomDrupalTestLocal';
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis',
-      'description' => 'Tests text analysis functionality.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
@@ -4558,13 +4396,6 @@ class MollomAnalysisTestCase extends MollomWebTestCase {
  * Tests text analysis with page cache.
  */
 class MollomAnalysisPageCacheTestCase extends MollomAnalysisTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis (page cache)',
-      'description' => 'Tests text analysis with page cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -4585,13 +4416,6 @@ class MollomAnalysisPageCacheTestCase extends MollomAnalysisTestCase {
  * Tests text analysis with page and form cache.
  */
 class MollomAnalysisPageFormCacheTestCase extends MollomAnalysisTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis (page + form cache)',
-      'description' => 'Tests text analysis with page and form cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -4613,13 +4437,6 @@ class MollomAnalysisPageFormCacheTestCase extends MollomAnalysisTestCase {
  * Tests text analysis as authenticated user.
  */
 class MollomAnalysisAuthenticatedTestCase extends MollomAnalysisTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis (authenticated)',
-      'description' => 'Tests text analysis as authenticated user.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -4632,13 +4449,6 @@ class MollomAnalysisAuthenticatedTestCase extends MollomAnalysisTestCase {
  * Tests text analysis as authenticated user with enabled page and form cache.
  */
 class MollomAnalysisAuthenticatedPageFormCacheTestCase extends MollomAnalysisTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis (authenticated + page + form cache)',
-      'description' => 'Tests text analysis as authenticated user with enabled page and form cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -4664,14 +4474,6 @@ class MollomAnalysisAuthenticatedPageFormCacheTestCase extends MollomAnalysisTes
  */
 class MollomAnalysisOptionsTestCase extends MollomWebTestCase {
   protected $disableDefaultSetup = TRUE;
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis options',
-      'description' => 'Tests text analysis binary mode, retaining unsure/spam.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
@@ -4894,14 +4696,6 @@ class MollomAnalysisPageCachingTestCase extends MollomWebTestCase {
 
   protected $disableDefaultSetup = TRUE;
 
-  public static function getInfo() {
-    return array(
-      'name' => 'Text analysis with caching',
-      'description' => 'Tests basic text analysis functionality with enabled caching.',
-      'group' => 'Mollom',
-    );
-  }
-
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
     $this->setKeys();
@@ -4952,14 +4746,6 @@ class MollomCaptchaTestCase extends MollomWebTestCase {
 
   // Re-route Mollom communication to this testing site.
   protected $mollomClass = 'MollomDrupalTestLocal';
-
-  public static function getInfo() {
-    return array(
-      'name' => 'CAPTCHA',
-      'description' => 'Tests CAPTCHA functionality.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('mollom', 'mollom_test'));
@@ -5129,13 +4915,6 @@ class MollomCaptchaTestCase extends MollomWebTestCase {
  * Tests CAPTCHA with page cache.
  */
 class MollomCaptchaPageCacheTestCase extends MollomCaptchaTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'CAPTCHA (page cache)',
-      'description' => 'Tests CAPTCHA with page cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -5153,13 +4932,6 @@ class MollomCaptchaPageCacheTestCase extends MollomCaptchaTestCase {
  * Tests CAPTCHA with page and form cache.
  */
 class MollomCaptchaPageFormCacheTestCase extends MollomCaptchaTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'CAPTCHA (page + form cache)',
-      'description' => 'Tests CAPTCHA with page and form cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -5178,13 +4950,6 @@ class MollomCaptchaPageFormCacheTestCase extends MollomCaptchaTestCase {
  * Tests CAPTCHA as authenticated user.
  */
 class MollomCaptchaAuthenticatedTestCase extends MollomCaptchaTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'CAPTCHA (authenticated)',
-      'description' => 'Tests CAPTCHA as authenticated user.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -5197,13 +4962,6 @@ class MollomCaptchaAuthenticatedTestCase extends MollomCaptchaTestCase {
  * Tests CAPTCHA as authenticated user with enabled page and form cache.
  */
 class MollomCaptchaAuthenticatedPageFormCacheTestCase extends MollomCaptchaTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'CAPTCHA (authenticated + page + form cache)',
-      'description' => 'Tests CAPTCHA as authenticated user with enabled page and form cache.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -5225,13 +4983,6 @@ class MollomCaptchaAuthenticatedPageFormCacheTestCase extends MollomCaptchaTestC
  * Tests report to Mollom functionality.
  */
 class MollomReportTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Reporting functionality',
-      'description' => 'Verify that session data is properly stored and content can be reported to Mollom.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('comment'));
@@ -5338,13 +5089,6 @@ class MollomReportTestCase extends MollomWebTestCase {
  * Tests moderating users.
  */
 class MollomModerateUserTestCase extends MollomWebTestCase {
-  public static function getInfo() {
-    return array(
-      'name' => 'Moderate users',
-      'description' => 'Tests moderating user accounts.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp();
@@ -5458,14 +5202,6 @@ class MollomModerateUserTestCase extends MollomWebTestCase {
  * Tests flag as inappropriate feature.
  */
 class MollomFlagAsInappropriateTestCase extends MollomWebTestCase {
-
-  public static function getInfo() {
-    return array(
-      'name' => 'Flag as Inappropriate',
-      'description' => 'Tests flag as inappropriate feature.',
-      'group' => 'Mollom',
-    );
-  }
 
   function setUp() {
     parent::setUp(array('comment', 'mollom'));
