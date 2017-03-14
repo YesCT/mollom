@@ -9,7 +9,5 @@ test_dependencies[] = ctools
 
 stylesheets[all][] = mollom.css
 
-files[] = includes/mollom.class.inc
-files[] = mollom.drupal.inc
 files[] = tests/mollom.test
 files[] = tests/mollom.class.test

@@ -3871,3 +3871,21 @@ function _mollom_actions_access_callbacks($entity_type, $entities) {
 /**
  * @} End of "name mollom_action".
  */
+
+/**
+ * Implements hook_autoload_info().
+ */
+function mollom_autoload_info() {
+  return array(
+    'Mollom' => 'includes/mollom.class.inc',
+    'MollomException' => 'includes/mollom.class.inc',
+    'MollomNetworkException' => 'includes/mollom.class.inc',
+    'MollomAuthenticationException' => 'includes/mollom.class.inc',
+    'MollomBadRequestException' => 'includes/mollom.class.inc',
+    'MollomResponseException' => 'includes/mollom.class.inc',
+    'MollomDrupal' => 'includes/mollom.drupal.inc',
+    'MollomDrupalTest' => 'includes/mollom.drupal.inc',
+    'MollomDrupalTestLocal' => 'includes/mollom.drupal.inc',
+    'MollomDrupalTestInvalid' => 'includes/mollom.drupal.inc',
+  );
+}
