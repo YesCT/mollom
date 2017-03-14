@@ -1,6 +1,8 @@
 name = Mollom
 description = Automatically moderates user-submitted content and protects your site from spam and profanity.
-core = 7.x
+package = Spam control
+type = module
+backdrop = 1.x
 configure = admin/config/content/mollom
 
 test_dependencies[] = ctools
