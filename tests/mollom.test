@@ -238,7 +238,7 @@ class MollomWebTestCase extends DrupalWebTestCase {
       // Only messages with a maximum severity of $max_severity or less severe
       // messages must pass. More severe messages need to fail. See note about
       // severity level constant values above.
-      $output = theme_dblog_message(array('event' => $row, 'link' => FALSE));
+      $output = dblog_format_message($row, FALSE);
       if ($row->severity >= $max_severity) {
         // Visually separate debug log messages from other messages.
         if ($row->severity == WATCHDOG_DEBUG) {
@@ -1737,7 +1737,7 @@ class MollomResponseConfiguredTestCase extends MollomWebTestCase {
     // If the keys passed assertion, then they were created on the right server
     // too.
     foreach ($this->messages as $row) {
-      $output = theme_dblog_message(array('event' => $row, 'link' => FALSE));
+      $output = dblog_format_message($row, FALSE);
       $this->assertTrue(strpos($output, 'Request: POST ' . $test_url . '/v1/site/') !== FALSE, 'Keys verified from configured endpoint.');
     }
   }

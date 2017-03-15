@@ -2647,7 +2647,7 @@ function _mollom_format_log(array $log) {
   $arguments = isset($log['arguments']) ? $log['arguments'] : array();
 
   // Hide further message details in the log overview table, if any.
-  // @see theme_dblog_message()
+  // @see dblog_format_message()
   if (!empty($log['entries'])) {
     // A <br> would be more appropriate, but filter_xss_admin() does not allow it.
     //$message = '<p>' . $message . '</p>' . "\n\n";
