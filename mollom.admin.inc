@@ -9,10 +9,8 @@
  * Helper function to prepare a list of available languages.
  */
 function _mollom_supported_languages() {
-  // D7-: _locale_prepare_predefined_list() removes installed languages, which
-  // is the exact opposite of what we want.
-  include_once DRUPAL_ROOT . '/includes/iso.inc';
-  $predefined = _locale_get_predefined_list();
+  include_once BACKDROP_ROOT . '/core/includes/standard.inc';
+  $predefined = standard_language_list();
   $supported = array_flip(MOLLOM::$LANGUAGES_SUPPORTED);
   $supported = array_combine(array_keys($supported), array_keys($supported));
   
