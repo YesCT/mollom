@@ -302,12 +302,12 @@ function mollom_test_save($record) {
   $status = drupal_write_record('mollom_test', $record, $update);
   if ($status === SAVED_NEW) {
     module_invoke_all('mollom_test_insert', $record);
-    module_invoke_all('entity_insert', $record, 'mollom_test');
+    mollom_entity_insert($record, 'mollom_test');
   }
   else {
     $status = SAVED_UPDATED;
     module_invoke_all('mollom_test_update', $record);
-    module_invoke_all('entity_update', $record, 'mollom_test');
+    mollom_entity_update($record, 'mollom_test');
   }
   return $status;
 }

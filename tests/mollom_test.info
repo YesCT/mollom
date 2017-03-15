@@ -1,5 +1,6 @@
 name = Mollom Test
 description = Testing module for Mollom functionality. Do not enable.
-core = 7.x
+type = module
+backdrop = 1.x
 package = Testing
-hidden = TRUE
+hidden = FALSE
